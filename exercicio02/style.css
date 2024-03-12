@@ -1,0 +1,10 @@
+.lista img{
+    width: 150px;
+    height: 200px;
+    margin-top: 50px;
+}
+.imagem-banner{
+    width: 100vw;
+    height: 400px;
+    object-fit: cover;
+}
