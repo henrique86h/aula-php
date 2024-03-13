@@ -17,16 +17,19 @@
 
     <div class="lista">
         <?php
-        $precos = ["R$ 21,42", "R$ 16,90", "R$ 0,95", "R$ 8,79", "18,99", "21,99", "51,99", "14,59"];
-        $produtos = ["Achocolatado Pó Nescau Lata 670g","Desinfetante Pinho Sol Lavanda 1,75l", "Suco Em Pó Trink Uva 15g", "Leite Condensado Moça Integral 395g", "Sabão Líquido Omo Peças Íntimas e Biquínis 300ml", "Enxaguante Bucal Listerine Cool Mint Leve 500ml Pague 350ml", "Protetor Solar Sundown FPS 30 Praia e Piscina 200ml", "Caixa de Chocolate Lacta Variedades 250,6g"];
+        $precos = ["R$ 21,42", "R$ 16,90", "R$ 0,95", "R$ 8,79", "R$ 18,99", "R$ 21,99", "R$ 51,99", "R$ 14,59"];
+        $produtos = ["Achocolatado Pó Nescau Lata 670g","Desinfetante Pinho Sol Lavanda 1,75l", "Suco Em Pó Trink Uva 15g", "Leite Condensado Moça Integral 395g", "Sabão Líquido Omo Peças Íntimas e Biquínis 300ml", "Enxaguante Bucal Listerine Cool Mint Leve 500ml Pague 350ml", "Protetor Solar Sundown FPS 30 Praia e Piscina 200ml", "Caixa de Chocolate <br> Lacta Variedades 250,6g"];
         $fotos = ["nescau670.png", "pinhosol1750.jpg", "trinkuva.webp", "leitemoça.webp", "sabaoomo.webp", "listerine.webp", "sundown.webp", "caixalacta.webp"];
-
         $numero_produtos = count($produtos);
         $contador = 0;
         while($contador < $numero_produtos){
+            echo "<div class = 'card'>";
             echo "<img src='$fotos[$contador]'>";
-            echo "<br><br>⠀⠀⠀⠀⠀$precos[$contador]<br>";
             echo "<br> $produtos[$contador] <br>";
+            echo "<div class = 'precos'>";
+            echo "$precos[$contador]<br>";
+            echo "</div>";
+            echo "</div>";
 
             $contador++;
         }
